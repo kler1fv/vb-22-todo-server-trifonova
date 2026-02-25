@@ -1,14 +1,14 @@
 const sqlite3 = require("sqlite3").verbose();
 
-const database = new sqlite3.Database("./tasks.db", function(error) {
-    if (error) {
-        console.log("Ошибка подключения:", error.message);
-    } else {
-        console.log("База SQLite подключена!");
-    }
+const db = new sqlite3.Database("./tasks.db", (err) => {
+  if (err) {
+    console.log("Ошибка подключения:", err.message);
+  } else {
+    console.log("База SQLite подключена!");
+  }
 });
 
-database.run(`
+db.run(`
   CREATE TABLE IF NOT EXISTS tasks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     text TEXT,
@@ -16,4 +16,4 @@ database.run(`
   )
 `);
 
-module.exports = database;
+module.exports = db;
