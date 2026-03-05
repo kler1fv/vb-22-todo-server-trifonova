@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO помощник</title>
+</head>
+<body>
+
+<header>
+    <h1 class="header-title">TO-DO помощник</h1>
+</header>
+
+<main>
+
+    <section class="task-input-section">
+        <input id="taskInput" type="text" class="task-input" maxlength="250" placeholder="Введите задачу">
+        <button id="addTask" class="button">Добавить</button>
+
+        <div class="controls-row">
+            <label>
+                <input type="checkbox" id="toggleAll">
+                Выбрать все
+            </label>
+<br>
+            <button id="deleteCompleted" class="button small-button">
+                Удалить выполненные
+            </button>
+        </div>
+
+        <div class="tabs">
+            <button id="tabAll" class="tab active">
+                Все (<span id="countAll">0</span>)
+            </button>
+            <button id="tabActive" class="tab">
+                Активные (<span id="countActive">0</span>)
+            </button>
+            <button id="tabCompleted" class="tab">
+                Завершенные (<span id="countCompleted">0</span>)
+            </button>
+        </div>
+    </section>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <div class="pagination">
+        <button id="previousPage">←</button>
+        <button id="nextPage">→</button>
+    </div>
+
+</main>
+
+<script src="ff.js"></script>
+
+</body>
+</html>

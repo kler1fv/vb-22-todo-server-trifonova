@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000e5;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: #f0f0f0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1200px;
+    width: 650px;
+}
+
+header {
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000d0;
+    color: aliceblue;
+}
+
+.header-title {
+    font-size: 2rem;
+}
+
+
+.task-input-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    background-color: #111;
+    color: #fff;
+    font-size: 1rem;
+    transition: border 0.3s, background 0.3s;
+}
+
+.task-input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: #1c1c1c;
+}
+
+
+.button {
+    width: 200px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a4c4e;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    margin-left: 33%;
+}
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Чекбоксы ===== */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.tab-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: transform 0.6s, box-shadow 0.2s;
+}
+
+.task-item.completed {
+    color: #888;
+}
+
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+.controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tab {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #24272b;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.small-button {
+    width: auto;
+    padding: 8px 12px;
+}
